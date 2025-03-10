@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 162 47% 50%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 162 47% 50%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 162 47% 50%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 162 47% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Neumorphic styles */
+.neumorphic {
+  --neumorphic-bg: #e0e5ec;
+  --neumorphic-light: #ffffff;
+  --neumorphic-dark: #a3b1c6;
+  --neumorphic-flat: #e0e5ec;
+  --neumorphic-text: #2d3748;
+  --neumorphic-text-light: #4a5568;
+  --neumorphic-primary: #38b2ac;
+  --neumorphic-primary-dark: #319795;
+}
+
+.light.neumorphic {
+  --background: 220 16% 90%;
+  --foreground: 222 47% 11%;
+  --card: 220 16% 90%;
+  --card-foreground: 222 47% 11%;
+  --popover: 220 16% 90%;
+  --popover-foreground: 222 47% 11%;
+  --primary: 162 47% 50%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 162 47% 50%;
+}
+
+.shadow-neumorphic {
+  box-shadow: 5px 5px 10px var(--neumorphic-dark), -5px -5px 10px var(--neumorphic-light);
+  border-radius: 10px;
+}
+
+.shadow-neumorphic-inset {
+  box-shadow: inset 5px 5px 10px var(--neumorphic-dark), inset -5px -5px 10px var(--neumorphic-light);
+  border-radius: 10px;
+}
+
+.shadow-neumorphic-header {
+  box-shadow: 0 4px 6px -1px var(--neumorphic-dark);
+}
+
+.neumorphic button {
+  transition: all 0.2s ease;
+}
+
+.neumorphic button:active {
+  box-shadow: inset 3px 3px 5px var(--neumorphic-dark), inset -3px -3px 5px var(--neumorphic-light);
+}
+
+.neumorphic .name-card {
+  background: var(--neumorphic-flat);
+  box-shadow: 5px 5px 10px var(--neumorphic-dark), -5px -5px 10px var(--neumorphic-light);
+  border: none;
+}
+
+.neumorphic .name-card:hover {
+  box-shadow: 7px 7px 15px var(--neumorphic-dark), -7px -7px 15px var(--neumorphic-light);
+}
+
+.arabic-text {
+  font-family: var(--font-arabic);
+  direction: rtl;
+}
+
+.name-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.name-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 230, 180, 0.1);
+}
+
+.canvas-container {
+  width: 100%;
+  height: 80vh;
+  max-height: 800px;
+  position: relative;
+}
+
+.canvas-container canvas {
+  border-radius: 0.5rem;
+}
+
